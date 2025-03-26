@@ -1,0 +1,34 @@
+.block {
+    display: block;
+    width: 200px;
+    background-color: powderblue;
+    padding: 10px; /*del elemento al borde*/
+    margin: 10px 0; /*el primer numero es vertical y el segundo horizontal*/
+
+}
+
+.inline {
+    display: inline;
+    background-color: peachpuff;
+    padding: 5px;
+}
+
+.inline-block {
+    background-color: palevioletred;
+    padding: 10px;
+    margin: 5px;
+
+    
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: pink;
+    padding: 10px;
+} 
+
+.flex-item {
+    background-color: pink;
+    padding: 10px;
+    margin: 5px;
+}
