@@ -1,0 +1,17 @@
+body{
+    background-image: url("");
+}
+
+.grilla{
+    display: grid;
+    /*grid-template-columns: 200px 200px 200px; /*establece una plantilla de columnas*/
+    /*grid-template-columns: repeat(3, 200px); /*hace lo mismo que la linea de arriba pero escrito de otra forma*/
+    grid-template-columns: repeat(3, 1fr); /*fr es una fraccion y divide el ancho de la pagina en la cantidad que diga el primer valor de la funcion */    
+    grid-auto-rows: auto; /* crea una nueva fila y el alto se hace automaticamente*/
+}
+
+img{
+    width: 100%;
+    object-fit: cover; /*para rellenar el contenedor donde se ubica(el padre)*/
+    aspect-ratio: 1/1; /*aspect ratio modifica la relacion de aspecto de la foto valor opcional en este ejercicio(pone el mismo tamaño para los tres, en este caso cuadrados), 1/1 hace cuadrado, 1/2 cartelera como cine*/
+}
