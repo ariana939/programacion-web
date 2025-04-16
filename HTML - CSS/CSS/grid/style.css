@@ -1,17 +1,59 @@
-body{
-    background-image: url("");
+body {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gamerfocus.co%2Fwp-content%2Fuploads%2F2019%2F06%2Fpokemon_collage.jpg&f=1&nofb=1&ipt=cf3797d4c4734bbd26680705f7aaa20391ed6c4cb51288f54b652bba54197ab8");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.grilla{
-    display: grid;
-    /*grid-template-columns: 200px 200px 200px; /*establece una plantilla de columnas*/
-    /*grid-template-columns: repeat(3, 200px); /*hace lo mismo que la linea de arriba pero escrito de otra forma*/
-    grid-template-columns: repeat(3, 1fr); /*fr es una fraccion y divide el ancho de la pagina en la cantidad que diga el primer valor de la funcion */    
-    grid-auto-rows: auto; /* crea una nueva fila y el alto se hace automaticamente*/
+.grilla {
+  display: grid;
+  /*grid-template-columns: 200px 200px 200px; /*establece una plantilla de columnas*/
+  /*grid-template-columns: repeat(3, 200px); /*hace lo mismo que la linea de arriba pero escrito de otra forma*/
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /*fr es una fraccion y divide el ancho de la pagina en la cantidad que diga el primer valor de la funcion */
+  /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));/* se rellena y establece un min y un max para la grilla*/
+  grid-auto-rows: auto; /* crea una nueva fila y el alto se hace automaticamente*/
+  gap: 10px;
 }
 
-img{
-    width: 100%;
-    object-fit: cover; /*para rellenar el contenedor donde se ubica(el padre)*/
-    aspect-ratio: 1/1; /*aspect ratio modifica la relacion de aspecto de la foto valor opcional en este ejercicio(pone el mismo tamaño para los tres, en este caso cuadrados), 1/1 hace cuadrado, 1/2 cartelera como cine*/
+img {
+  width: 100%;
+  object-fit: cover; /*para rellenar el contenedor donde se ubica(el padre)*/
+  aspect-ratio: 1/1; /*aspect ratio modifica la relacion de aspecto de la foto valor opcional en este ejercicio(pone el mismo tamaño para los tres, en este caso cuadrados), 1/1 hace cuadrado, 1/2 cartelera como cine*/
+}
+
+@media (max-width: 1024px) {
+  /**/
+  .grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /**/
+  .grilla {
+    grid-template-columns: 1fr;
+  }
+}
+
+.block {
+  width: 250px;
+  height: 300px;
+  color: black;
+  font-family: sans-serif;
+  margin: 10px;
+  padding: 10px;
+}
+.block_1 {
+  background-color: rgb(68, 88, 51);
+}
+
+.block_2 {
+  background-color: rgb(62, 126, 128);
+}
+
+.block_3 {
+  background-color: rgb(48, 57, 66);
 }
