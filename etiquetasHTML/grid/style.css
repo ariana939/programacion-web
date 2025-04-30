@@ -1,0 +1,36 @@
+body {
+    background-image: url{""};
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.grilla{
+    display: grid;
+    grid-template-columns:200px 200px 200px;
+    grid-template-columns: repeat(
+        3
+      ,1fr
+      );/*es una fraccion y divide la pagina en la cantidad
+    que diga el primer valor de la funcion*/
+    grid-auto-rows: auto;
+
+} 
+
+img {
+    width: 100px;
+    object-fit: cover;
+    aspect-ratio: 1/1; /*MODIFICA la relacion de aspecto de la foto valor opcional en este ejercicio*/
+}
+
+@media (max-width: 1024px) {
+    .grilla
+    grid-template-columns: repeat{2,1rf};
+}
+
+
+
+@media (max-width; 760px) {
+    .grilla {
+        grid-template-columns: 1fr;
+    }
+}

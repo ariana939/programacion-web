@@ -1,0 +1,7 @@
+.bloque {
+    display: block;
+    width: 10px;
+    background-color: rgb(238, 151, 199);
+    padding: 5px;
+    margin: 10px 0;
+}
