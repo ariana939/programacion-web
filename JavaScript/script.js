@@ -1,3 +1,4 @@
+//30/04
 var miVariable = 'contenido de la variable' // no se usa
 
 //let --> solamente vive en el scope declarado o en su hijos
@@ -85,3 +86,60 @@ console.log(miObjeto.nombre); //trae el nombre (ari)en este caso, si pusiera ".e
 for(let i=0; i < miArreglo.length; i++){ //"i++" recorre de a uno
     console.log(miArreglo[i]);//imprimi en pantalla el arreglo con su posicion 
 }
+
+//-----------------------------------------------------------------------------
+
+//07/05
+//Metodos de arreglos 
+//length -> longitud del arreglo
+
+const longitud = miArreglo.length;
+console.log(longitud);
+
+//push(valor)->Agrega un elemento al final
+//equivalen al append de python
+
+miArreglo.push('Nicolas');
+console.log("cadena", miArreglo);
+
+//pop() elimina el ultimo elemento de un arreglo
+//si queremos lo podemos guardar en una variable
+const ultimo = miArreglo.pop();
+console.log("ultimo", ultimo);
+
+//shift()elimina el primer valor de un arreglo,
+//tambien lo guarda 
+const primero = miArreglo.shift();
+console.log(primero);
+
+//unshift(valor) Agrega un elemento al principio del arreglo
+miArreglo.unshift("luna");
+console.log(miArreglo);
+
+//forEach
+//SOLO RECORRE ,no guarda los valores en ningun lado 
+miArreglo.forEach((item, index, miArregloEntero)=>{
+    console.log(
+        "index",
+        index,
+        "elemento", 
+        item,//item (los numeros)
+        "arreglo completo",
+        miArregloEntero
+    );
+});
+
+
+//map recorre el arreglo, lo modifica con una funcion y nos devuelve uno nuevo 
+const nuevoArreglo = miArreglo.map((item, index)=> {
+    const num = 2;
+    return (item += num);
+});
+
+console.log("nuevo arreglo", nuevoArreglo);
+
+
+//filter crea un nuevo array a partir de los elementos que cumplan la condicion (lo mismo que el map)
+const arregloNum = [2, 4, 5, 6];
+const pares = arregloNum.filter((item)=> item % 2 == 0);
+console.log(pares);

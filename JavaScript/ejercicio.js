@@ -1,3 +1,4 @@
+//30/04
 //Ejercicios de dificultad media 
 //IF
 const numero = 8
@@ -35,3 +36,50 @@ for(let i=0; i < lista.length; i++){
     }
 }
 console.log (`La suma de multiplos de 3, sin incluir los multiplos de 5 es ${sumar}`);
+
+//-----------------------------------------------------------------------------------------
+//07/05
+
+//Ejercicio: Tienda de Productos
+
+//1
+const inventario = [];
+const prod1 = {nombre: "Auriculares", precio: 1500, categoria: "Electrónica" };
+const prod2 = {nombre: "cartera",     precio: 2000, categoria: "Bolsos" };
+const prod3 = {nombre: "aritos",      precio: 1000, categoria: "Accesorios" };
+const prod4 = {nombre: "zapatillas",  precio: 2500, categoria: "Calzado" };
+
+inventario.push(prod1,prod2,prod3, prod4);
+//2
+inventario.forEach((item, index, inventarioEntero)=>{
+    console.log(
+        "index",
+        index,
+        "elemento", 
+        item,//item (los numeros)
+        "inventario completo",
+        inventarioEntero
+    );
+});
+//3
+const electronica = inventario.filter((item)=> item.categoria === "Electrónica");// "item.categoria === "electrinica" quiero decir que cuando el item (categoria,precio,nombre) sea igual a (eletronica,bolsos, accesorios,calzado)
+console.log(electronica);
+
+//4
+const nombres = inventario.map((item, index)=> {
+    const nombre = item.nombre;
+    return (nombre);
+});
+console.log("nombres", nombres);
+
+//Ejercicio: Lista de Peliculas
+//1
+const peliculas = [];
+const peli1 = {titulo: "chucky",     director: "mary luz", año: 2000, genero: "terror" };
+const peli2 = {titulo: "cars",       director: "ayelen",   año: 2005, genero: "autos"};
+const peli3 = {titulo: "cenicienta", director: "abi",      año: 2010, genero: "infantil"};
+peliculas.push(peli1,peli2,peli3);
+
+//2 (no lo termine)
+const peliNew = {titulo: "casa", director: "eve", año: 2015, genero: "terror" };
+miArreglo.unshift(peliNew);
