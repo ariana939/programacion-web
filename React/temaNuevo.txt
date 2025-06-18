@@ -1,0 +1,26 @@
+Los componentes cuando se declaran siempre arrancan con mayúscula y siempre retornan estética, estos archivos 
+ahora tienen la extencion de JSX, "<> </>"no impactan en el CEO.
+El archivo "package.json" esta toda la informacion interna del proyecto(para poder levantarlo)
+    Los "dependencies" utilidades o funcionalidades que nosotros instalamos para desarrollar la pagina.
+    Los "devDependencies" nos ayudan a nosotros los desarrolladores a desarrollar la pagina. (ej: eslint marca errores) 
+El archivo "index.html" no se toca nada, punto de entrada que va usar la pagina para levantar.
+El archivo "main.jsx" (es un componente que conecta con el html) que esta dentro de "src" tampoco se toca nada.
+    El codigo (css global) importa en "main.jsx"
+El archivo "eslint.config.js"se encarga de darnos errores
+    (ej: quiero que me avises cuando no pongo un ; al final, errores que nosotros configuramos)
+El archivo "gitignore" sirve para ignorar todo lo que no queremos que se suba a git hub.
+El archivo "App.jsx" (borramos lineas)
+
+Hay dos tipos de export:
+    export no nombrado o default: nos permite renombrar (que no tenga llaves lo hace mas flexible)
+    export nombrado o comun: (lleva llaves) (ejemplo: en el archivo app.jsx hay {Proveedor})
+
+Props: son valores que podemos pasarle a un componente para que lo tome y lo use para que este
+    componenter realice una accion
+
+Ganchos/ Hooks: son para hacer funcionalidades, arracan siempre con la palabra "use" en miniscula 
+
+useEffect: ejecuta el codigo que se encuentra dentro, tantas veces como se actualicen
+    sus dependencias si no hay dependencias se ejecuta solo antes del primer renderizado
+
+useSate: guarda datos en una variable y tiene una funcion actualizada 
