@@ -23,4 +23,11 @@ Ganchos/ Hooks: son para hacer funcionalidades, arracan siempre con la palabra "
 useEffect: ejecuta el codigo que se encuentra dentro, tantas veces como se actualicen
     sus dependencias si no hay dependencias se ejecuta solo antes del primer renderizado
 
-useSate: guarda datos en una variable y tiene una funcion actualizada 
+useSate: guarda datos en una variable y tiene una funcion actualizadora
+import './App.css'
+
+---------------------------------------------------
+el nombre de un evento xunado se hace un boton siempre se llamara "handClick"
+nunca se pone negro y blanco(solos) porque impacta visualmente
+{nombre && <h2>{nombre}</h2>} es como if solo
+{nombre ? <>hola>/> : <>chau</>} es como un if e else

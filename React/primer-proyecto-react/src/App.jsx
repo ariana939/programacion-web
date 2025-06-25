@@ -1,3 +1,5 @@
+//18/05
+/*
 import './App.css'
 import Pepito from './components/usuario/Usuario'; // export default, renombrado
 import {Proveedor} from './components/proveedor/Proveedor'; // export comun
@@ -28,8 +30,36 @@ function App() {
     <Pepito/>
     <Proveedor name = {"ariana"}/>
   </>
-  );
+//  );
+//}
+
+export default App; // es un export no nombrado o default
+*/
+
+
+import { useState } from 'react';
+import './App.css'
+
+function App() {
+
+  const [nombre, setNombre] = useState("");
+
+  const handClick = () => {
+    console.log(nombre);
+  };
+
+  const handleInputChange = (event) => {
+    setNombre(event.target.value); // siempre que queramos capturar el valor de un imput se hace asi
+  };
+
+  return (
+  <>
+  <input type="text" placeholder="Escribe tu nombre" onChange={handleInputChange} value={nombre} />
+  <button onClick={handClick}>Mostrar</button>
+  {nombre && <h2>{nombre}</h2>}
+  </>
+  ); 
+  //{nombre && <h2>{nombre}</h2>} si existe el nombre que lo muestre
 }
 
 export default App; // es un export no nombrado o default
-
