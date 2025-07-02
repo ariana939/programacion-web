@@ -39,6 +39,9 @@ export default App; // es un export no nombrado o default
 
 import { useState } from 'react';
 import './App.css'
+import Contador from './components/ejercicios/ejercicio1'; 
+import Captura from './components/ejercicios/ejercicio2'; 
+import Montar from './components/ejercicios/ejercicio3'; 
 
 function App() {
 
@@ -57,6 +60,10 @@ function App() {
   <input type="text" placeholder="Escribe tu nombre" onChange={handleInputChange} value={nombre} />
   <button onClick={handClick}>Mostrar</button>
   {nombre && <h2>{nombre}</h2>}
+  <Contador/>
+  <Captura/>
+  <Montar/>
+
   </>
   ); 
   //{nombre && <h2>{nombre}</h2>} si existe el nombre que lo muestre
