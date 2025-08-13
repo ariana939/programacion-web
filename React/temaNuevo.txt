@@ -16,7 +16,7 @@ Hay dos tipos de export:
     export nombrado o comun: (lleva llaves) (ejemplo: en el archivo app.jsx hay {Proveedor})
 
 Props: son valores que podemos pasarle a un componente para que lo tome y lo use para que este
-    componenter realice una accion
+    componenter realice una accion, una forma de pasar datos
 
 Ganchos/ Hooks: son para hacer funcionalidades, arracan siempre con la palabra "use" en miniscula 
 
@@ -31,3 +31,16 @@ el nombre de un evento xunado se hace un boton siempre se llamara "handClick"
 nunca se pone negro y blanco(solos) porque impacta visualmente
 {nombre && <h2>{nombre}</h2>} es como if solo
 {nombre ? <>hola>/> : <>chau</>} es como un if e else
+
+13/08
+npm run dev para correr
+npm install instala las dependencias?
+index el punto de entrada, no se toca, se conecta con el componente main.jsx, por eso el main.jsx tampoco se toca
+git ignore ignora los archivos, porque son pesadas
+app.jsx= un conjunto de tres(java,html)intregra la logica,estetica y laiout?
+componente arranca es mayuscula, si no se rompe
+componente devuelve interfaz (html)
+para que sirve un estado? se puede cambiar un estado, useSate
+[count, setCount] siempre en la izquierda esta el valor y a la derecha la funcion, como está abajo
+valor, una funcion del valor
+useEffect ejecuta todo el codigo, recibe dos parametros
