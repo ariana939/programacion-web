@@ -44,3 +44,10 @@ para que sirve un estado? se puede cambiar un estado, useSate
 [count, setCount] siempre en la izquierda esta el valor y a la derecha la funcion, como está abajo
 valor, una funcion del valor
 useEffect ejecuta todo el codigo, recibe dos parametros
+-----------------------------
+el npm istall instala las dependencias
+package.json le dice al react las necesidades
+onclick-onchange salta EVENTOS(sobre todo los vamos a ver en los return)
+dentro de onclick puede ir una funcion
+npm run dev levanta/corre
+dentro de un objeto hay clave y valor 
