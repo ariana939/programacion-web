@@ -4,15 +4,25 @@ import './App.css'
 function App() {
   const [num, setnum] = useState([1,2,3,4]);
   const [persona, setPersona]= useState({nombre:"pepito", edad: "30"})
+  
   //Spread Operator
+  
   function myFunction(){
     //setnum([1,2,3,4])// set num permite cambiar el arreglo de numeros
     setnum([...num, num.length+1]);// "...num" otra forma pero sin escribir los numeros,
     // "num es el nombre de el arreglo", ponemos una "," y agregamos el numero que queremos
   }
+
   function propiedad(){
-    const propiedades = useState({nombre:"ari", edad:"17"})
-    setPersona({...persona});
+    const propiedad = {...persona, apellido:"Perez"}
+    setPersona(propiedad);
+    console.log(propiedad);
+  }
+
+  function cambiarNom(){
+    const nuevoNombre = {...persona, nombre: "luis"}
+    setPersona(nuevoNombre)
+    console.log(nuevoNombre)
   }
   //tarea:
   //hacer que el setNUm agregue numeros consecutivos .length --> 3 puntos
@@ -26,11 +36,9 @@ function App() {
         {num.map((item, index)=>(
           <><p>{item}</p></>
         ))}
-        {persona.map((item, index)=>(
-          <><p>{item}</p></>
-        ))}
         <button onClick={myFunction}>Agregar numero</button>
         <button onClick={propiedad}>Agregar</button>
+        <button onClick={cambiarNom}>Agregar</button>
       </div>
     </>
   )
