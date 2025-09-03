@@ -1,38 +1,56 @@
-import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import  {Operator } from "./components/operator";
-import { Pedidos } from "./components/primer-ejercicio1";
-
-
-
+import{useState} from 'react'//cada vez que vamos a usar el state debemos poner este reglon
+import './App.css'
 
 function App() {
-const [count, setCount] = useState(0);
+  const [num, setnum] = useState([1,2,3,4]);
+  const [persona, setPersona]= useState({nombre:"pepito", edad: "30"})
+  
+  //Spread Operator
+  
+  function myFunction(){
+    //setnum([1,2,3,4])// set num permite cambiar el arreglo de numeros
+    setnum([...num, num.length+1]);// "...num" otra forma pero sin escribir los numeros,
+    // "num es el nombre de el arreglo", ponemos una "," y agregamos el numero que queremos
+  }
 
+  function propiedad(){
+    const propiedad = {...persona, apellido:"Perez"}
+    setPersona(propiedad);
+    console.log(propiedad);
+  }
 
+ //sincronico
+  function cambiarNom(){
+    const nuevoNombre = {...persona, nombre: "luis"}
+    setPersona(nuevoNombre)
+    console.log(nuevoNombre)
+  }
 
+  //asincronico
+//  function cambiarNom(){
+//  setPersona = {...persona, nombre: "luis"}
+//  console.log(persona) 
+//}
 
-useEffect(() => {
-  //useEffect ejecuta el codigo una vez si no hay nada en los
-  //corchetes, y si hay variables(dependencias)
-  //se va a ejecutar tanto como actualice
-}, []);
-
-
-
-
-return (
-  <>
-    <Operator />
-    <Pedidos />
-  </>
-);
+  //tarea:
+  //hacer que el setNUm agregue numeros consecutivos .length --> 3 puntos
+  //agregar una propiedad al objeto persona usando spread operator--> 4 puntos
+  //y que al hacer un click en un boton dispare la funcion y la muestre por consola
+  //opcional 3 puntos:
+  //partiendo de {nombre :"pepito", edad: 30}, cambia solo nombre a "luis" usando spread
+  
+  return (
+    <>
+      <div>
+        {num.map((item, index)=>(
+          <><p>{item}</p></>
+        ))}
+        <button onClick={myFunction}>Agregar numero</button>
+        <button onClick={propiedad}>Agregar</button>
+        <button onClick={cambiarNom}>CambiarNombre</button>
+      </div>
+    </>
+  )
 }
 
-
-
-
-export default App;
-
+export default App
